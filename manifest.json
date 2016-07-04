@@ -1,0 +1,32 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon_16.png",
+      "default_popup": "pages/popup.html",
+      "default_title": "LianghongGift(Gift,Hosts,Todolist,Spider)"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "exclude_globs": [  ],
+      "include_globs": [ "*" ],
+      "js": [ "/js/script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "
+   1,快速切换 Domain-IP 配置而不需要编辑 Hosts 文件，并方便的添加、修改、分组（批量开关）。
+   1,Switch domain-ip mapping (Hosts file) between different environment",
+   "icons": {
+      "128": "icons/icon_128.png",
+      "16": "icons/icon_16.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "51",
+   "name": "LianghongGift(Gift,Hosts,Todolist,Spider)",
+   "options_page": "pages/option.html",
+   "permissions": [ "proxy", "tabs", "webRequest", "webRequestBlocking", "storage", "tabs", "http://*/*", "https://*/*", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1"
+}
