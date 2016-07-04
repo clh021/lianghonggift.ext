@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Add Hosts</title>
+    <title>添加IP记录</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="/libs/jquery.min.js"></script>
     <script src="/libs/tpl.js"></script>
@@ -12,7 +12,7 @@
   </head>
   <body>
   <div class="inner">
-    <h1>Host Switch Plus
+    <h1>IP切换
         <small>Default: <select id="default"><option value="DIRECT">Direct</option><option value="SYSTEM">System</option></select>
         &nbsp;&nbsp;
         <label class="checkbox"><input id="status" type="checkbox" value="1" checked><span>Enable</span></label></small>
@@ -28,33 +28,26 @@
             <div id="formNote" class="formNote" style="display:none;"></div>
             <input type="hidden" name="id" id="item-id">
             <div class="field">
-                <label for="ip" class="col-xs-2 control-label">* IP</label>
-                <input type="text" autocomplete="off" placeholder="127.0.0.1 or 127.0.0.1:8888" id="ip" list="ip-list">
+                <input type="text" autocomplete="off" placeholder="*IP：127.0.0.1 or 127.0.0.1:8888" id="ip" list="ip-list">
                 <datalist id="ip-list"></datalist>
             </div>
 
             <div class="field">
-                <label for="domain">* Domain</label>
-                <input type="text" placeholder="www.example.com" id="domain" list="domain-list">
+                <input type="text" placeholder="* Domain：www.example.com" id="domain" list="domain-list">
                 <datalist id="domain-list"></datalist>
             </div>
 
             <div class="field">
-                <label>Tags</label>
-                <span id="div_labels" class="checkboxs">
-                    <label class="checkbox"><input type="checkbox" name="labels[]" value="prod">prod</label>
-                    <label class="checkbox"><input type="checkbox" name="labels[]" value="dev">dev</label>
-                    <label class="checkbox"><input type="checkbox" name="labels[]" value="test">test</label>
-                </span>
-                <input type="text" id="add_labels" placeholder="Example: test1,翻墙">
+                <input type="text" id="add_labels" placeholder="eg: test1,翻墙">
+                <label class="checkbox"><input type="checkbox" name="labels[]" value="prod">prod</label>
+                <label class="checkbox"><input type="checkbox" name="labels[]" value="dev">dev</label>
+                <label class="checkbox"><input type="checkbox" name="labels[]" value="test">test</label>
             </div>
             <div class="field">
-                <label for="note">Note</label>
                 <input type="text" placeholder="Note" id="note">
             </div>
 
             <div class="field">
-                <label></label>
                 <input type="submit" value="Submit">
             </div>
         </form>

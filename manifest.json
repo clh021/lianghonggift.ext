@@ -16,7 +16,6 @@
       "run_at": "document_start"
    } ],
    "description": "
-   1,快速切换 Domain-IP 配置而不需要编辑 Hosts 文件，并方便的添加、修改、分组（批量开关）。
    1,Switch domain-ip mapping (Hosts file) between different environment",
    "icons": {
       "128": "icons/icon_128.png",
